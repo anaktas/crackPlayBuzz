@@ -8,14 +8,12 @@ $(document).ready(function() {
 	
 	var finalObject = JSON.parse(JSON.stringify(arrayObject));
 	
-	var obj = {};
 	var corrects = {};
 	var count = 0;
 	$.each(finalObject, function(){
 		$.each(this, function(key, val) {
 			if (key == 'answers') {
 				count++;
-				obj[key + count] = val;
 				$.each(val, function() {
 					var temp = {};
 					$.each(this, function(k, v) {
